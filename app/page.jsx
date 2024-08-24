@@ -19,8 +19,10 @@ const Home = () => {
                             <span className="text-accent">Krishna Kumar</span>
                         </h1>
                         <p className="max-w-[500px] mb-9 text-white/80">
-                            I excel at TGC Service Pvt Ltd and I am proficent in
-                            various programming languages and technologies.
+                            Experienced and versatile IT professional with a
+                            strong background in VOIP development, system
+                            administration, web development, and network
+                            engineering.
                         </p>
                         {/* btn */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -46,7 +48,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Stats/>
+            <Stats />
         </section>
     );
 };

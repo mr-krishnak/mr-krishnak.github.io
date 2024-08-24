@@ -4,14 +4,14 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const socials = [
     {
         icon: <FaGithub />,
-        path: "",
+        path: "https://github.com/mr-krishnak",
     },
     {
         icon: <FaLinkedin />,
-        path: "",
+        path: "https://www.linkedin.com/in/mr-krishna/",
     },
 ];
-const Social = ({containerStyles, iconStyles}) => {
+const Social = ({ containerStyles, iconStyles }) => {
     return (
         <div className={containerStyles}>
             {socials.map((item, index) => {

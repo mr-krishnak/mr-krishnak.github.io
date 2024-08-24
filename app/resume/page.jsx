@@ -10,7 +10,16 @@ import {
     FaLinux,
 } from "react-icons/fa";
 import { DiNginx } from "react-icons/di";
-import { SiNextdotjs } from "react-icons/si";
+import {
+    SiNextdotjs,
+    SiTailwindcss,
+    SiLua,
+    SiGnubash,
+    SiAsterisk,
+    SiKamailio,
+    SiWebrtc,
+} from "react-icons/si";
+import { MdOutlineDialerSip } from "react-icons/md";
 
 //componants
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -27,7 +36,7 @@ import { delay, motion } from "framer-motion";
 const about = {
     title: "About me",
     description:
-        "I am a full stack developer with experience in building web applications using various technologies such as HTML, CSS, JavaScript, React, Node.js, and Python. I have a passion for learning and creating innovative solutions. I am a quick learner and always eager to take on new challenges.",
+        "Experienced and versatile IT professional with a strong background in VOIP developer, system administration, web development, and network engineering. Proficient in designing and implementing innovative projects, such as inbound call solutions and auto-dialing frameworks. Adept at managing software/hardware installations and providing robust support across various IT domains.",
     info: [
         {
             feildName: "Name",
@@ -72,34 +81,29 @@ const experiance = {
         "I have worked with many companies and individuals over the years and have picked up many skills along the way. These are some of the technologies I have been working with recently:",
     items: [
         {
-            company: "Next.js",
-            position: "Frontend Developer",
-            duration: "2023 - Present",
-            icon: <SiNextdotjs />,
+            company: "TGC Services Pvt. Ltd.",
+            position: "Senior Linux Administrator",
+            duration: "Jul 2023 - Present",
         },
         {
-            company: "Node.js",
-            position: "Backend Developer",
-            duration: "2022 - 2023",
-            icon: <FaNodeJs />,
+            company: "Taurus BPO Services India LLP",
+            position: "IT Team Leader",
+            duration: "Mar 2022 - Jun 2023",
         },
         {
-            company: "Python",
-            position: "Backend Developer",
-            duration: "2021 - 2022",
-            icon: <FaPython />,
+            company: "Ledx Legal Leaning Edutech Pvt Ltd",
+            position: "Network Engineer",
+            duration: "October 2021 - March 2022",
         },
         {
-            company: "IwebXtreme",
+            company: "Iwebxtreme",
             position: "Web Developer",
-            duration: "2019 - 2021",
-            icon: <FaLinux />,
+            duration: "Dec 2018 - Sep 2021",
         },
         {
-            company: "Linux",
+            company: "Techvialinux",
             position: "System Administrator",
-            duration: "2018 - 2019",
-            icon: <FaLinux />,
+            duration: "May 2017 - Nov 2018",
         },
     ],
 };
@@ -109,22 +113,17 @@ const education = {
     icon: "/assets/resume/cap.svg",
     title: "Education",
     description:
-        "I have a Bachelor of Engineering degree in Computer Science and Engineering from NIT Trichy.",
+        "I have a Bachelor of Engineering degree in Computer Science and Engineering from Rajiv Gandhi Proudyogiki Vishwavidyalaya.",
     items: [
         {
-            institution: "NIT Trichy",
-            degree: "Bachelor of Engineering",
-            duration: "2017 - 2021",
+            institution: "Rajiv Gandhi Proudyogiki Vishwavidyalaya",
+            degree: "Bachelor of Engineering (CSE)",
+            duration: "2016 - 2019",
         },
         {
-            institution: "NIT Trichy",
-            degree: "High School",
-            duration: "2015 - 2017",
-        },
-        {
-            institution: "NIT Trichy",
-            degree: "Primary School",
-            duration: "2005 - 2015",
+            institution: "Dhar Polytechnic College, Dhar",
+            degree: "Diploma in Computer Science",
+            duration: "2012 - 2015",
         },
     ],
 };
@@ -136,6 +135,38 @@ const skills = {
     description:
         "I have worked with many technologies over the years and have picked up many skills along the way.",
     skillList: [
+        {
+            name: "SIP",
+            icon: <MdOutlineDialerSip />,
+        },
+        {
+            name: "Asterisk",
+            icon: <SiAsterisk />,
+        },
+        {
+            name: "Kamailio",
+            icon: <SiKamailio />,
+        },
+        {
+            name: "WebRTC",
+            icon: <SiWebrtc />,
+        },
+        {
+            name: "Next.js",
+            icon: <SiNextdotjs />,
+        },
+        {
+            name: "Tailwind",
+            icon: <SiTailwindcss />,
+        },
+        {
+            name: "Lua",
+            icon: <SiLua />,
+        },
+        {
+            name: "Bash",
+            icon: <SiGnubash />,
+        },
         {
             name: "HTML",
             icon: <FaHtml5 />,
@@ -217,7 +248,7 @@ const Resume = () => {
                                                     </h3>
                                                     <div className="flex items-center gap-3">
                                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                        <p className="text-white/60">
+                                                        <p className="text-white/60 text-sm">
                                                             {item.company}
                                                         </p>
                                                     </div>
@@ -252,7 +283,7 @@ const Resume = () => {
                                                     </h3>
                                                     <div className="flex items-center gap-3">
                                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                        <p className="text-white/60">
+                                                        <p className="text-white/60 text-sm">
                                                             {item.institution}
                                                         </p>
                                                     </div>
@@ -277,7 +308,9 @@ const Resume = () => {
                                     {skills.skillList.map((skill, index) => {
                                         return (
                                             <li key={index} className="">
-                                                <TooltipProvider delayDuration={100}>
+                                                <TooltipProvider
+                                                    delayDuration={100}
+                                                >
                                                     <Tooltip>
                                                         <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
                                                             <div className="text-6xl group-hover:text-accent transition-all duration-300">
@@ -285,7 +318,9 @@ const Resume = () => {
                                                             </div>
                                                         </TooltipTrigger>
                                                         <TooltipContent>
-                                                            <p className="capitalize">{skill.name}</p>
+                                                            <p className="capitalize">
+                                                                {skill.name}
+                                                            </p>
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
@@ -295,7 +330,10 @@ const Resume = () => {
                                 </ul>
                             </div>
                         </TabsContent>
-                        <TabsContent value="about" className="w-full text-center xl:text-left">
+                        <TabsContent
+                            value="about"
+                            className="w-full text-center xl:text-left"
+                        >
                             <div className="flex flex-col gap-[30px]">
                                 <h3 className="text-4xl font-bold">
                                     {about.title}
@@ -304,15 +342,20 @@ const Resume = () => {
                                     {about.description}
                                 </p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                                    {about.info.map((item, index)=>{
-                                        return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                                            <span className="text-white/60">
-                                                {item.feildName}
-                                            </span>
-                                            <span className="text-xl">
-                                                {item.feildValue}
-                                            </span>
-                                        </li>
+                                    {about.info.map((item, index) => {
+                                        return (
+                                            <li
+                                                key={index}
+                                                className="flex items-center justify-center xl:justify-start gap-4"
+                                            >
+                                                <span className="text-white/60">
+                                                    {item.feildName}
+                                                </span>
+                                                <span className="text-xl">
+                                                    {item.feildValue}
+                                                </span>
+                                            </li>
+                                        );
                                     })}
                                 </ul>
                             </div>
